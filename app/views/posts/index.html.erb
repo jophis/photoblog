@@ -7,6 +7,7 @@
         <h2><%= link_to post.title, post %></h2>
         <a href= "<%= post_url(post) %>"><%= image_tag(post.image.tiny.url) %></a>
         <%= post.description %>
+        <%= post.created_at.strftime("%d %b. %Y") %>
         <br>
         <hr>
     <% end %>

@@ -12,12 +12,12 @@ class PhotoUploader < CarrierWave::Uploader::Base
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
   end
 
-  version :tiny do  
-    process :resize_to_fill => [20, 20]
+  version :index_size do  
+    process :resize_to_fill => [1700, 955]
   end
 
-  version :profile_size do  
-    process :resize_to_fill => [300, 300]
+  version :show_size do  
+    process :resize_to_fill => [1700, 955]
   end
 
   def extension_white_list

@@ -4,10 +4,11 @@
 <% x = 0 %>
 <% @posts.reverse.each do |post| %>
 <div class= "<%=colors_array[x]%>">
-    <h2><%= link_to post.title, post %></h2>
+
     <div class= "date-box">
         <%= post.created_at.strftime("%d") %>
-    </div><br>
+    </div>
+    <div class= "post-title"><%=post.title%></div><br>
     <div class= "date-box">
         <%= post.created_at.strftime("%b.") %>
     </div>
@@ -15,7 +16,11 @@
         <%= post.description %>
     </div>
     <div class="divider"></div>
-    <a href= "<%= post_url(post) %>"><%= image_tag(post.image.index_size.url, width:'100%') %></a>
+    <div class= "photo">
+        <a href= "<%= post_url(post) %>"><%= image_tag(post.image.index_size.url, width:'100%') %></a>
+    </div>
+    <br>
+    <br>
 </div>
 <% colors_array.push(colors_array[x]) %>
 <% x += 1 %>

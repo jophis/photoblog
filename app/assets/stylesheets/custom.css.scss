@@ -6,10 +6,31 @@
 
 body {
   padding-top: 60px;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8)), url(/assets/forrest.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
 }
 
 section {
   overflow: auto;
+}
+.body-container {
+  width: 78%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -69px;
+  margin-bottom: -69px; 
+  padding-top: 77px;
+  padding-left: 6em;
+  padding-right: 6em
 }
 
 textarea {
@@ -26,26 +47,62 @@ textarea {
 
 /* posts */
 
-.post-blue h2{
-	width: 100%;
-  color: blue;
-}
-
 .post-blue {
   width: 100%;
-  color: blue;
+  color: #588C7E;
 }
+
+.post-yellow {
+  width: 100%;
+  color: #F2AE72;
+}
+
+.post-red {
+  width: 100%;
+  color: #8C4646;
+}
+
+.post-blue .date-box{
+  background-color: #588C7E;
+}
+
+.post-red .date-box{
+  background-color: #8C4646;
+}
+
+.post-yellow .date-box{
+  background-color: #F2AE72;
+}
+
+.post-blue .divider{
+  border-color: #588C7E;
+}
+
+.post-red .divider{
+  border-color: #8C4646;
+}
+
+.post-yellow .divider{
+  border-color: #F2AE72;
+}
+
+
+
+
+
 .date-box {
   background-color: green;
   display: inline-block;
-  width: 6%;
+  width: 8%;
   color: white;
   font-size: 1.8vw;
   height: 34px;
   text-align: center;
-  padding-top: .5%;
+  padding-top: .9%;
   padding-bottom: .5%;
   /*vertical-align: middle;*/
+  padding-left: 2px;
+  padding-right: 2px;
   
 }
 .description {
@@ -53,15 +110,27 @@ textarea {
   font-size: 30px;
 }
 
+.post-title {
+  display: inline-block;
+  font-size: 30px;
+}
+
 .divider {
-    display: block;
-    margin-top: 0em;
-    margin-bottom: 0.5em;
-    margin-left: auto;
-    margin-right: auto;
-    border-style: solid;
-    border-width: 2px;
-    border-color: green;
+  display: block;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: green;
+}
+
+.photo {
+  width: 100%;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.4);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
@@ -99,14 +168,15 @@ p {
 /* header */
 
 .navbar-inverse {
-  background: -webkit-linear-gradient(#9368E9, #943bea); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(#9368E9, #943bea); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(#9368E9, #943bea); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(#9368E9, #943bea); /* Standard syntax */
+  background: -webkit-linear-gradient(#black, #black); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#black, #black); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#9368E9, #1F1F1F); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.99)), 
+  url("http://www.1wallpaperhd.com/wp-content/uploads/Black%20and%20White/FTP1/2560x1600/Winter%20trees%20(Black%20and%20White)%20Wallpapers%202560x1600.jpg");; /* Standard syntax */
   color: white;
 
-  border-color: #943bea;
-  opacity:1;
+  border-color: #1F1F1F;
+  opacity:.9;
 
 }
 
@@ -118,6 +188,7 @@ p {
 }
 
 #logo {
+  display: block;
   float: left;
   margin-right: 10px;
   font-size: 1.7em;
@@ -134,6 +205,14 @@ p {
   background-color: transparent;
 }
 
+.glyphicon.glyphicon-camera {
+  float: left;
+  display: block;
+  font-size: 2.1em;
+  padding-top: 8px;
+  letter-spacing: 6px;
+  color: white;
+}
 /* footer */
 
 footer {

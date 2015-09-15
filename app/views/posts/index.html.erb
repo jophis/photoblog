@@ -1,8 +1,9 @@
-<p id="notice"><%= notice %></p>
+
 
 <% colors_array = ["post-blue", "post-yellow", "post-red"] %>
 <% x = 0 %>
-<% @posts.reverse.each do |post| %>
+<% @posts.each do |post| %>
+<% x = 0 %> <!-- remove -->
 <div class= "<%=colors_array[x]%>">
 
     <div class= "date-box">
@@ -10,7 +11,7 @@
     </div>
     <div class= "post-title"><%=post.title%></div><br>
     <div class= "date-box">
-        <%= post.created_at.strftime("%b.") %>
+        <%= post.created_at.strftime("%b") %>
     </div>
     <div class= "description">
         <%= post.description %>
@@ -22,10 +23,11 @@
     <br>
     <br>
 </div>
+
 <% colors_array.push(colors_array[x]) %>
 <% x += 1 %>
 <% end %>
-
+<%= paginate @posts %>
 <br>
 
 

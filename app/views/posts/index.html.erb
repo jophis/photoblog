@@ -18,14 +18,12 @@
     </div>
     <div class="divider"></div>
     <div class= "photo">
-        <a href= "<%= post_url(post) %>"><%= image_tag(post.image.index_size.url, width:'100%') %></a>
+        <a href= "<%= post_url(post) %>"><%= image_tag(post.image, width:'100%')%>
     </div>
     <br>
     <br>
 </div>
 
-<% colors_array.push(colors_array[x]) %>
-<% x += 1 %>
 <% end %>
 <%= paginate @posts %>
 <br>
